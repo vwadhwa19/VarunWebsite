@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body background="~/Content/background_home.jpg">
+    <div style="background:cadetblue !important" class="jumbotron">
+        <img src="~/Content/profile.jpg" width="250" height="250" class="img-circle" align="right" />
+        <h1><b>Varun Wadhwa</b></h1>
+        <h2><b>I like:</b> <b><span style='color: darkblue'><span id="sequence"></span></span></b></h2>
+        <p> Hi, welcome to my personal portfolio. Feel free to check it out and reach out to me with any comments, questions, or feedback!</p>
+
+        <script>
+            var example = ['solving challenging problems', 'designing new applications', 'learning  new technologies'];
+
+            textSequence(0);
+            function textSequence(i) {
+
+                if (example.length > i) {
+                    setTimeout(function () {
+                        document.getElementById("sequence").innerHTML = example[i];
+                        textSequence(++i);
+                    }, 2000); 
+
+                } else if (example.length == i) { 
+                    textSequence(0);
+                }
+
+            }
+        </script>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" align="center">
+            <a href="https://github.com/vwadhwa19" target="_blank"><img src="~/Content/github.jpg" style="width:100px; height:100px" class="img-thumbnail" title="Github"></a>
+            <p>Check out my Github portfolio to see some of the cool projects I have worked on!</p>
+        </div>
+        <div class="col-md-4" align="center">
+            <a href="https://www.linkedin.com/in/varun-wadhwa/" target="_blank"><img src="~/Content/linkedin.jpg" style="width:100px; height:100px" class="img-thumbnail" title="Linkedin"></a>
+            <p>Feel free to connect and reach out to me on Linkedln to learn more about my experiences!</p>
+        </div>
+        <div class="col-md-4" align="center">
+            <a href="mailto:varun.wadhwa19@gmail.com" target="_blank"><img src="~/Content/email.jpg" style="width:100px; height:100px" class="img-thumbnail" title="Email"></a>
+            <p>Send me an email if you have any questions or want to get in touch!</p>
+        </div>
+    </div>
+
+    <style>
+        .jumbotron > img:hover {
+            transform: scale(1.1);
+            position: relative;
+        }
+
+        a:hover img {
+            opacity: 0.5;
+            background-color: Black;
+            z-index: 10;
+        }
+    </style>
+    <marquee behavior="scroll" direction="left" scrollamount="15"><p><b>This website was designed by Varun Wadhwa. Thanks for visiting!</b></p></marquee>
+</body>
+</html>

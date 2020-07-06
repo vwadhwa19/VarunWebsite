@@ -1,0 +1,52 @@
+﻿@model VarunWebsite.Models.MailModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body style="background-color:#8FBC8F">
+    <h1><b>Contact Me</b></h1>
+    <br />
+    <form method="post" name="contact-form" id="contact-form">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label name="Name">Name</label>
+                <input name="Name" class="form-control" placeholder="Your Name" />
+                <span asp-validation-for="Name" class="text-muted"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label name="Email">Email</label>
+                <input name="Email" class="form-control" placeholder="Your Email" />
+                <span asp-validation-for="Email" class="text-muted"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label name="Subject">Subject</label>
+                <input name="Subject" class="form-control" placeholder="Your Subject" />
+                <span asp-validation-for="Subject" class="text-muted"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label name="Message">Message</label>
+                <textarea rows="8" cols="20" Name="Message" class="form-control" placeholder="Your Message"></textarea>
+                <span asp-validation-for="Message" class="text-muted"></span>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success" id="Create">Send Message</button>
+        </div>
+    </form>
+
+    <div class="a">
+        <img src="~/Content/contact.jpg" width="500" height="250" align="right" style="position:absolute;left:700px; top:200px;" />
+    </div>
+
+</body>
+</html>

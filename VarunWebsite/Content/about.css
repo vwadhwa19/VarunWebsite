@@ -1,0 +1,21 @@
+﻿.code {
+    border-radius: 5px;
+    width: 850px;
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: 30px;
+    background: #ccc;
+    height: 700px;
+    font-family: 'Monaco', 'Courier New';
+    text-align: left;
+    font-size: 14px;
+    color: #F5DEB3;
+}
+
+.console {
+    width: 850px;
+    padding: 20px;
+    height: 710px;
+    margin: 0 auto;
+    background: #000000;
+}
